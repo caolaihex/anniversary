@@ -132,3 +132,9 @@ footer{
   0%,100%{transform:translateY(0);}
   50%{transform:translateY(-15px);}
 }
+.intro.hide{
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
