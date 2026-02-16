@@ -94,24 +94,7 @@ footer{
   100%{transform:translateY(-100vh); opacity:0;}
 }
 
-.intro{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100vh;
-  background:linear-gradient(135deg,#ffc0cb,#fff0f5);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  z-index:9999;
-  transition:1s;
-}
-
-.flower{
-  width:140px;
-  animation:floatFlower 3s ease-in-out infinite;
-}
+/* 🌸 INTRO SCREEN */
 
 .intro{
   position:fixed;
@@ -126,15 +109,27 @@ footer{
   z-index:9999;
   opacity:1;
   transition: opacity 1s ease;
+  cursor:pointer;
+}
+
+/* allow clicking anywhere */
+.intro-content{
+  pointer-events:none;
+  text-align:center;
+}
+
+.flower{
+  width:140px;
+  animation:floatFlower 3s ease-in-out infinite;
+}
+
+.intro.hide{
+  opacity:0;
+  pointer-events:none;
+  visibility:hidden;
 }
 
 @keyframes floatFlower{
   0%,100%{transform:translateY(0);}
   50%{transform:translateY(-15px);}
 }
-.intro.hide{
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-}
-
