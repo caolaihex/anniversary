@@ -112,7 +112,7 @@ footer{
   cursor:pointer;
 }
 
-/* allow clicking anywhere */
+
 .intro-content{
   pointer-events:none;
   text-align:center;
