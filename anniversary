@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ha</title>
+  <title>Happy Anniversary 💖</title>
 
   <link rel="stylesheet" href="style.css">
 
@@ -28,7 +28,7 @@
   happy 1st anniversary, babyy!! 
   thank you for this one whole year that you filled with love, care and so much happiness. 
   every day with you is special and you always make me feel safe, appreciated and loved.
- i’m really lucky and thankful to have you in my life. 
+  i’m really lucky and thankful to have you in my life. 
   you are one of the best things that ever happened to me.
   i’m excited for all the months and years that are still coming for us.
   thank you for loving me the way you do. 
@@ -38,28 +38,13 @@
 </section>
 
 <section class="gallery">
-
-  <div class="polaroid">
-<img src="pictures/1.jpg"> 
-  </div>
-
-  <div class="polaroid">
-<img src="pictures/2.jpg">     
-  </div>
-
-  <div class="polaroid">
-<img src="pictures/3.jpg">    
-  </div>
-
-  <div class="polaroid">
-<img src="pictures/4.jpg">    
-  </div>
-
+  <div class="polaroid"><img src="pictures/1.jpg"></div>
+  <div class="polaroid"><img src="pictures/2.jpg"></div>
+  <div class="polaroid"><img src="pictures/3.jpg"></div>
+  <div class="polaroid"><img src="pictures/4.jpg"></div>
 </section>
 
-<footer> 
-  forever & always 
-</footer>
+<footer>forever & always</footer>
 
 <script src="script.js"></script>
 </body>
@@ -70,7 +55,6 @@ const intro = document.getElementById("intro");
 intro.addEventListener("click", () => {
   intro.classList.add("hide");
 });
-
 
 function createHeart(){
   const heart = document.createElement("div");
@@ -89,10 +73,9 @@ function createHeart(){
 }
 
 setInterval(createHeart, 500);
-
 body{
   margin:0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-align:center;
   color:#d63384;
   background: linear-gradient(135deg,#ffc0cb,#ffd6e7,#ffe4ec,#fff0f5);
@@ -119,7 +102,6 @@ h1{
   padding:25px;
   border-radius:20px;
   box-shadow:0 8px 20px rgba(255,105,180,0.25);
-  font-family:'Poppins', sans-serif;
 }
 
 .gallery{
@@ -140,18 +122,8 @@ h1{
   transition:0.4s;
 }
 
-.polaroid:nth-child(odd){
-  transform:rotate(-4deg);
-}
-
-.polaroid:nth-child(even){
-  transform:rotate(4deg);
-}
-
-.polaroid:nth-child(1){ margin-top:10px; }
-.polaroid:nth-child(2){ margin-top:45px; }
-.polaroid:nth-child(3){ margin-top:0px; }
-.polaroid:nth-child(4){ margin-top:35px; }
+.polaroid:nth-child(odd){ transform:rotate(-4deg); }
+.polaroid:nth-child(even){ transform:rotate(4deg); }
 
 .polaroid:hover{
   transform:scale(1.07) rotate(0deg);
@@ -164,8 +136,6 @@ h1{
   object-fit:cover;
   border-radius:8px;
 }
-
-
 
 .polaroid::before{
   content:"";
@@ -198,6 +168,7 @@ footer{
   0%{transform:translateY(0); opacity:1;}
   100%{transform:translateY(-100vh); opacity:0;}
 }
+
 .intro{
   position:fixed;
   top:0;
@@ -212,26 +183,9 @@ footer{
   transition:1s;
 }
 
-.intro-content{
-  text-align:center;
-  animation:fadeIn 2s ease;
-}
-
 .flower{
   width:140px;
   animation:floatFlower 3s ease-in-out infinite;
-}
-
-.intro h2{
-  font-family:'Playfair Display', serif;
-  color:#d63384;
-  margin-top:15px;
-}
-
-.intro p{
-  font-family:'Poppins', sans-serif;
-  color:#ff69b4;
-  font-size:14px;
 }
 
 .intro.hide{
@@ -242,9 +196,4 @@ footer{
 @keyframes floatFlower{
   0%,100%{transform:translateY(0);}
   50%{transform:translateY(-15px);}
-}
-
-@keyframes fadeIn{
-  from{opacity:0;}
-  to{opacity:1;}
 }
