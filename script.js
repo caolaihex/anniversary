@@ -2,9 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const intro = document.getElementById("intro");
 
-  intro.addEventListener("click", () => {
+  function openSite() {
     intro.classList.add("hide");
-  });
+  }
+
+  intro.addEventListener("click", openSite);
+  intro.addEventListener("touchstart", openSite);
 
   function createHeart(){
     const heart = document.createElement("div");
@@ -17,9 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.body.appendChild(heart);
 
-    setTimeout(() => {
-      heart.remove();
-    }, 6000);
+    setTimeout(() => heart.remove(), 6000);
   }
 
   setInterval(createHeart, 500);
