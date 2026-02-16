@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ha</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="intro" id="intro">
+  <div class="intro-content">
+    <img src="C:\Users\Window\OneDrive\Desktop\New folder (2)\pictures\flower.png" class="flower">
+    <h2>For You</h2>
+    <p>Click to open</p>
+  </div>
+</div>
+
+<header>
+  <h1>Happy Anniversary, baby!!</h1>
+</header>
+
+<section class="message">
+  <p>
+  happy 1st anniversary, babyy!! 
+  thank you for this one whole year that you filled with love, care and so much happiness. 
+  every day with you is special and you always make me feel safe, appreciated and loved.
+ i’m really lucky and thankful to have you in my life. 
+  you are one of the best things that ever happened to me.
+  i’m excited for all the months and years that are still coming for us.
+  thank you for loving me the way you do. 
+  i promise to always be here for you, to support you and to love you more every single day.
+  i love you so much, babyy.
+  </p>
+</section>
+
+<section class="gallery">
+
+  <div class="polaroid">
+    <img src="C:\Users\Window\OneDrive\Desktop\New folder (2)\pictures\1.jpg">
+ 
+  </div>
+
+  <div class="polaroid">
+    <img src="C:\Users\Window\OneDrive\Desktop\New folder (2)\pictures\2.jpg">
+    
+  </div>
+
+  <div class="polaroid">
+    <img src="C:\Users\Window\OneDrive\Desktop\New folder (2)\pictures\3.jpg">
+   
+  </div>
+
+  <div class="polaroid">
+    <img src="C:\Users\Window\OneDrive\Desktop\New folder (2)\pictures\4.jpg">
+   
+  </div>
+
+</section>
+
+<footer> 
+  forever & always 
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+const intro = document.getElementById("intro");
+
+intro.addEventListener("click", () => {
+  intro.classList.add("hide");
+});
+
+
+function createHeart(){
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "💖";
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+  heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 6000);
+}
+
+setInterval(createHeart, 500);
+
+body{
+  margin:0;
+  font-family: 'Montserrat', sans-serif;
+  text-align:center;
+  color:#d63384;
+  background: linear-gradient(135deg,#ffc0cb,#ffd6e7,#ffe4ec,#fff0f5);
+  min-height:100vh;
+}
+
+header{
+  padding:70px 20px 20px;
+}
+
+h1{
+  font-family: 'Playfair Display', serif;
+  font-size:3.2em;
+  text-shadow:0 0 18px rgba(255,105,180,0.35);
+}
+
+.message{
+  max-width:700px;
+  margin:auto;
+  font-size:18px;
+  line-height:1.9;
+  background:rgba(255,255,255,0.65);
+  backdrop-filter:blur(12px);
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 8px 20px rgba(255,105,180,0.25);
+  font-family:'Poppins', sans-serif;
+}
+
+.gallery{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:35px;
+  padding:50px 20px;
+}
+
+.polaroid{
+  position:relative;
+  background:white;
+  padding:15px 15px 35px;
+  width:220px;
+  border-radius:10px;
+  box-shadow:0 10px 22px rgba(0,0,0,0.18);
+  transition:0.4s;
+}
+
+.polaroid:nth-child(odd){
+  transform:rotate(-4deg);
+}
+
+.polaroid:nth-child(even){
+  transform:rotate(4deg);
+}
+
+.polaroid:nth-child(1){ margin-top:10px; }
+.polaroid:nth-child(2){ margin-top:45px; }
+.polaroid:nth-child(3){ margin-top:0px; }
+.polaroid:nth-child(4){ margin-top:35px; }
+
+.polaroid:hover{
+  transform:scale(1.07) rotate(0deg);
+  z-index:5;
+}
+
+.polaroid img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+
+
+.polaroid::before{
+  content:"";
+  width:65px;
+  height:18px;
+  background:#ffc0cb;
+  position:absolute;
+  top:-10px;
+  left:50%;
+  transform:translateX(-50%) rotate(-6deg);
+  border-radius:5px;
+  opacity:0.8;
+}
+
+footer{
+  padding:25px;
+  font-size:14px;
+  color:#ff69b4;
+}
+
+.heart{
+  position:fixed;
+  bottom:-10px;
+  font-size:20px;
+  animation:float 6s linear infinite;
+  color:#ff69b4;
+}
+
+@keyframes float{
+  0%{transform:translateY(0); opacity:1;}
+  100%{transform:translateY(-100vh); opacity:0;}
+}
+.intro{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  background:linear-gradient(135deg,#ffc0cb,#fff0f5);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  transition:1s;
+}
+
+.intro-content{
+  text-align:center;
+  animation:fadeIn 2s ease;
+}
+
+.flower{
+  width:140px;
+  animation:floatFlower 3s ease-in-out infinite;
+}
+
+.intro h2{
+  font-family:'Playfair Display', serif;
+  color:#d63384;
+  margin-top:15px;
+}
+
+.intro p{
+  font-family:'Poppins', sans-serif;
+  color:#ff69b4;
+  font-size:14px;
+}
+
+.intro.hide{
+  opacity:0;
+  pointer-events:none;
+}
+
+@keyframes floatFlower{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-15px);}
+}
+
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
