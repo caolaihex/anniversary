@@ -40,23 +40,19 @@
 <section class="gallery">
 
   <div class="polaroid">
-    <img src="C:\Users\Window\OneDrive\Desktop\New folder (2)\pictures\1.jpg">
- 
+<img src="pictures/1.jpg"> 
   </div>
 
   <div class="polaroid">
-    <img src="C:\Users\Window\OneDrive\Desktop\New folder (2)\pictures\2.jpg">
-    
+<img src="pictures/2.jpg">     
   </div>
 
   <div class="polaroid">
-    <img src="C:\Users\Window\OneDrive\Desktop\New folder (2)\pictures\3.jpg">
-   
+<img src="pictures/3.jpg">    
   </div>
 
   <div class="polaroid">
-    <img src="C:\Users\Window\OneDrive\Desktop\New folder (2)\pictures\4.jpg">
-   
+<img src="pictures/4.jpg">    
   </div>
 
 </section>
